@@ -34,8 +34,7 @@ public class JmsConfig {
     }
 
     @Bean
-    public JmsListenerContainerFactory jmsFactoryTopic(ConnectionFactory connectionFactory,
-                                                       DefaultJmsListenerContainerFactoryConfigurer configurer) {
+    public JmsListenerContainerFactory jmsFactoryTopic(ConnectionFactory connectionFactory, DefaultJmsListenerContainerFactoryConfigurer configurer) {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         configurer.configure(factory, connectionFactory);
         factory.setPubSubDomain(true);
@@ -43,7 +42,7 @@ public class JmsConfig {
     }
 
     @Bean
-    public JmsTemplate jmsTemplate() {
+    public JmsTemplate jmsTemplateQueue() {
         return new JmsTemplate(connectionFactory());
     }
 
