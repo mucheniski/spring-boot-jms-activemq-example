@@ -6,10 +6,19 @@
 	},
 	"item": [
 		{
-			"name": "New Request",
+			"name": "send message to queue",
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"diego\",\r\n    \"message\":\"Fila em postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "localhost:8080/queue",
 					"host": [
