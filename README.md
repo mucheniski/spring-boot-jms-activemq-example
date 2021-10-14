@@ -43,7 +43,14 @@ No modelo ponto a ponto existe um consumidor e um ou mais produtores, e estes pr
 No modelo publish/subscribe as mensagens são publicadas pelos produtores (Publishers) contendo um Topico, e os consumidores (subscribers) podem registrar interesse em receber mensagens de determinados topicos, assim quando a mensagem é enviada, todos os consumidores que tem registro de interesse recebem essa mensagem. Nem o produtor (publisher) e o consumidor (subscriber) sabem um do outro, conhecem apenas os topicos.  
 ![](images/PubSubExample.png)  
 
-# Nomenclaturas
+### Nomenclaturas
 POJO - Plain Old Java Object  
 JMS - Java Message Service
 
+### Swagger  
+http://localhost:8080/your-app-root/swagger-ui/  
+http://localhost:8080/swagger-ui/#/  
+
+Spring Fox gera o JSON da com as definições da API  
+Swagger UI gera a renderização da documentação através do JSON em um HTML  
+O que o swagger-ui faz é uma requisição no endpoint /v2/api-docs gera o JSON e através desse JSON renderiza o HTML visualmente para a documentação da API
