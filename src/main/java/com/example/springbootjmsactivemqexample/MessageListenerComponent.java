@@ -10,12 +10,12 @@ public class MessageListenerComponent {
 
     @JmsListener(destination = "queue.sample")
     public void onReceiverQueue(String message) {
-        log.info("--------- listen Message at the Listener ---------- " + message);
+        log.info("--------- listen Message at the Queue Listener ---------- " + message);
     }
 
     @JmsListener(destination = "topic.sample", containerFactory = "jmsFactoryTopic")
-    public void onReceiverTopic(String str) {
-        System.out.println( str );
+    public void onReceiverTopic(String message) {
+        log.info("--------- listen Message at the Topic Listener ---------- " + message);
     }
 
 }

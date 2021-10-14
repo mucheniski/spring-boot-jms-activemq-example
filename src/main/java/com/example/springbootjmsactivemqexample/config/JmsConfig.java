@@ -42,14 +42,15 @@ public class JmsConfig {
     }
 
     @Bean
-    public JmsTemplate jmsTemplateQueue() {
-        return new JmsTemplate(connectionFactory());
-    }
-
-    @Bean
     public JmsTemplate jmsTemplateTopic() {
         JmsTemplate jmsTemplate = new JmsTemplate(connectionFactory());
         jmsTemplate.setPubSubDomain( true );
         return jmsTemplate;
     }
+
+    @Bean
+    public JmsTemplate jmsTemplateQueue() {
+        return new JmsTemplate(connectionFactory());
+    }
+
 }

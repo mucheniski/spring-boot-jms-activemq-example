@@ -20,13 +20,42 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:8080/queue",
+					"raw": "localhost:8080/send-message/queue",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
+						"send-message",
 						"queue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send message to topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\":\"diego\",\r\n    \"message\":\"Fila em postman\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/send-message/topic",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"send-message",
+						"topic"
 					]
 				}
 			},
