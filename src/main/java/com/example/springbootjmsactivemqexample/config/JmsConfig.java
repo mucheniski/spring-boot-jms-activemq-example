@@ -1,4 +1,4 @@
-package com.example.springbootjmsactivemqexample;
+package com.example.springbootjmsactivemqexample.config;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.springframework.beans.factory.annotation.Value;

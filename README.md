@@ -23,11 +23,11 @@ Baixar a ultima versão, descompactar e ir em C:\ws-developer\jms\ActiveMQ\apach
 Sobe na porta http://localhost:8161/admin/ user admin senha admin
 
 ### Tipos de programas ou componentes Java usados no JMS  
-*Tabspace* Cliente - Produz ou consome mensagens  
-*Tabspace* Produtor - Apenas produz as mensagens  
-*Tabspace* Consumidor -  Recebe e consome as mensagens  
-*Tabspace* Provedor - Qualquer um dos vários sistemas que implementem as especificações JMS.  
-*Tabspace* Destino - Um objeto que suporta comunicação indireta no JMS, ou um tópico JMS ou uma fila JMS.  
+Cliente - Produz ou consome mensagens  
+Produtor - Apenas produz as mensagens  
+Consumidor -  Recebe e consome as mensagens  
+Provedor - Qualquer um dos vários sistemas que implementem as especificações JMS.  
+Destino - Um objeto que suporta comunicação indireta no JMS, ou um tópico JMS ou uma fila JMS.  
 
 ### Modelos suportados
 Ponto a ponto ou modelo de filas (Queue)  
