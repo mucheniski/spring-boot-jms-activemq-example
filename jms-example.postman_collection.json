@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "e3f04c5e-5e53-47e1-a028-b89dff90356a",
+		"name": "jms-example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/queue",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"queue"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
