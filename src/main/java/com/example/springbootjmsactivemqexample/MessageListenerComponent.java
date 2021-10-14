@@ -1,34 +1,21 @@
-//package com.example.springbootjmsactivemqexample;
-//
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.boot.ApplicationArguments;
-//import org.springframework.boot.ApplicationRunner;
-//import org.springframework.jms.annotation.JmsListener;
-//import org.springframework.jms.core.JmsTemplate;
-//import org.springframework.stereotype.Component;
-//
-//@Component
-//public class MessageListenerComponent implements ApplicationRunner {
-//
-//    @Autowired private JmsTemplate jmsTemplate;
-//    @Autowired private JmsTemplate jmsTemplateTopic;
-//
-//
-//    @JmsListener(destination = "queue.sample")
-//    public void onReceiverQueue(String str) {
-//        System.out.println( str );
-//    }
-//
-//    @JmsListener(destination = "topic.sample", containerFactory = "jmsFactoryTopic")
-//    public void onReceiverTopic(String str) {
-//        System.out.println( str );
-//    }
-//
-//
-//    @Override
-//    public void run(ApplicationArguments args) throws Exception {
-//        jmsTemplate.convertAndSend("queue.sample", "{user: 'diego', usando: 'fila'}");
-//        jmsTemplateTopic.convertAndSend("topic.sample", "{user: 'diego', usando: 'tópico'}");
-//    }
-//
-//}
+package com.example.springbootjmsactivemqexample;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.jms.annotation.JmsListener;
+import org.springframework.stereotype.Component;
+
+@Component
+@Slf4j
+public class MessageListenerComponent {
+
+    @JmsListener(destination = "queue.sample")
+    public void onReceiverQueue(String message) {
+        log.info("--------- listen Message at the Listener ---------- " + message);
+    }
+
+    @JmsListener(destination = "topic.sample", containerFactory = "jmsFactoryTopic")
+    public void onReceiverTopic(String str) {
+        System.out.println( str );
+    }
+
+}

@@ -22,7 +22,7 @@ public class QueueController {
         log.info("--------- Starting sendMessage at the Controller ----------");
         var message = queueService.sendMessage(messageDTO);
         log.info("--------- Finishing sendMessage at the Controller ----------");
-        return message.toString();
+        return message;
     }
 
 }
