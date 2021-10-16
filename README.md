@@ -18,8 +18,16 @@ JMS é assincrono, ou seja, o produtor (Client) que envia uma mensagem não requ
 
 Para executar é preciso que o provedor esteja ativo no server, como por exemplo o ActiveMQ, indo na pasta bin/win64/activemq.bat. Pode ser iniciado o activeMQ e a partir dai os serviços conseguem enviar e receber as mensagens através dele.
 
-Executar o activeMQ
-Baixar a ultima versão, descompactar e ir em C:\ws-developer\jms\ActiveMQ\apache-activemq-5.16.3\bin\win64 duplo click em activemq.bat
+### Executar o activeMQ  
+Windows  
+Baixar a ultima versão, descompactar e ir em /apache-activemq-5.16.3\bin\win64 duplo click em activemq.bat  
+para parar Ctrl + C  
+
+Linux  
+Baixar a ultima versão, descompactar e ir em /apache-activemq-5.16.3/bin/linux-x86-64 pelo terminal, e executar o comando ./activemq start  
+para parar ./activemq stop  
+
+
 Sobe na porta http://localhost:8161/admin/ user admin senha admin
 
 ### Tipos de programas ou componentes Java usados no JMS  
